@@ -1,0 +1,10 @@
+<% entries.each(function(entry){ %>
+  <li>
+    <a href="<%= entry.get("guid")%>">
+      <%= entry.get('title') %>
+    </a>
+    <p><%= entry.escape('description') %></p>
+    <p><%= entry.get('json') %></p>
+
+  </li>
+<% }); %>

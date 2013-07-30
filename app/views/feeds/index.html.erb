@@ -1,0 +1,16 @@
+<h1>F33d.me</h1>
+
+<script type="application/json" id="bootstrapped_feeds_json">
+  <%= Feed.all.to_json(include: :entries).html_safe %>
+</script>
+
+<script type="application/javascript">
+  $(document).ready(function(){
+    var feeds = JSON.parse($("#bootstrapped_feeds_json").html());
+    window.RSS.initialize($("html"), feeds);
+
+  });
+
+</script>
+
+
