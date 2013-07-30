@@ -1,6 +1,6 @@
 <% entries.each(function(entry){ %>
   <li>
-    <a href="<%= entry.get("guid")%>">
+    <a href="<%= entry.get("link")%>">
       <%= entry.get('title') %>
     </a>
     <p><%= entry.escape('description') %></p>

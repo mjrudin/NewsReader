@@ -29,10 +29,10 @@ class Feed < ActiveRecord::Base
       self.title = feed_data.title
       save!
 
-      existing_entry_guids = Entry.pluck(:guid).sort
+      existing_entry_guids = Entry.pluck(:link).sort
       feed_data.entries.each do |entry_data|
 
-        unless existing_entry_guids.include?(entry_data.guid)
+        unless existing_entry_guids.include?(entry_data.link)
           Entry.create_from_json!(entry_data, self)
         end
       end

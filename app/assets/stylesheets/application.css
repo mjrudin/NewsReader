@@ -20,6 +20,8 @@
 }
 
 .content {
+  position: relative;
+  left: 20px;
   width: 500px;
   float: left;
   background: #DFEAEB;

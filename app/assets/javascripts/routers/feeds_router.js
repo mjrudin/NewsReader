@@ -21,6 +21,7 @@ RSS.Routers.FeedsRouter = Backbone.Router.extend({
 
   feedEntries: function(id){
     var that = this;
+    that.feedIndex();
     var feed = that.feeds.get(id);
     var rawEntries = feed.get('entries');
     //console.log(rawEntries)
