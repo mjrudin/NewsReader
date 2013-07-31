@@ -1,3 +1,5 @@
-== Welcome to New Reader Demo
+==F33D.me
 
-Good luck. Have fun.
+Follow your favorite RSS feeds with this bootstrap app!
+
+rake db:seed for seed data
